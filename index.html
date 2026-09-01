@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「私と君、ゲームのプレイスタイルはどれくらい似てる？」診断</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>「私と君、ゲームのプレイスタイルはどれくらい似てる？」診断</h1>
+  <div class="description">
+    <p>
+      10個のゲームに関する質問に答えて、<br>
+      君のゲームプレイスタイルが私とどれだけ一致するか診断してみて
+    </p>
+    <p>
+      「自分ならどうする？」を考えて直感で選んでね
+    </p>
+  </div>
+  <!-- Q1 -->
+  <div id="question1">
+    <h2>🎮 Q1：シューティング</h2>
+    <img src="IMG_1233.png" alt="シューティングゲーム">
+    <p>敵チームと遭遇！君はどうする？</p>
+    <button data-score="0">とにかく突撃！見つけた敵は全部倒す！</button>
+    <button data-score="0">一度距離を取って、周囲を確認する</button>
+    <button data-score="1">味方と合流してから攻める</button>
+    <button data-score="0">敵に気づかれない場所から狙う</button>
+  </div>
+  <!-- Q2 -->
+  <div id="question2" style="display: none;">
+    <h2>⚔️ Q2：RPG</h2>
+    <img src="IMG_1234.png" alt="RPG">
+    <p>ボス戦で苦戦中。君ならどうする？</p>
+    <button data-score="0">何度でも挑む！そのうち勝てる！</button>
+    <button data-score="0">装備やスキルを見直す</button>
+    <button data-score="0">レベル上げしてから再挑戦する</button>
+    <button data-score="1">ボスの行動パターンを観察する</button>
+  </div>
+  <!-- Q3 -->
+  <div id="question3" style="display: none;">
+    <h2>🌾 Q3：牧場・生活系</h2>
+    <img src="IMG_1235.png" alt="牧場・生活系ゲーム">
+    <p>ゲームを始めたばかり。まず何をする？</p>
+    <button data-score="0">とにかくストーリーを進める</button>
+    <button data-score="0">自分の家や牧場を整える</button>
+    <button data-score="0">マップを隅々まで探索する</button>
+    <button data-score="1">NPCに話しかけまくる</button>
+  </div>
+  <!-- Q4 -->
+  <div id="question4" style="display: none;">
+    <h2>🏎️ Q4：レースゲーム</h2>
+    <img src="IMG_1242.png" alt="レースゲーム">
+    <p>レース中、前の車を抜くチャンスが来た！</p>
+    <button data-score="0">今だ！一気に抜く！</button>
+    <button data-score="1">相手の動きを見て安全に抜く</button>
+    <button data-score="0">コースのショートカットを狙う</button>
+    <button data-score="0">無理に抜かず、後ろについていく</button>
+  </div>
+  <!-- Q5 -->
+  <div id="question5" style="display: none;">
+    <h2>🧩 Q5：パズル</h2>
+    <img src="IMG_1236.png" alt="パズルゲーム">
+    <p>難しい問題が出てきた！</p>
+    <button data-score="0">思いついた方法を片っ端から試す</button>
+    <button data-score="0">じっくり考えてから動かす</button>
+    <button data-score="0">とりあえず簡単なところから片付ける</button>
+    <button data-score="1">盤面全体を見て、最初から解法を考える</button>
+  </div>
+  <!-- Q6 -->
+  <div id="question6" style="display: none;">
+    <h2>🏰 Q6：タワーディフェンス</h2>
+    <img src="IMG_1237.png" alt="タワーディフェンス">
+    <p>敵の大群が迫ってきている！</p>
+    <button data-score="0">火力の高いユニットを大量投入</button>
+    <button data-score="1">敵の進路を考えて配置する</button>
+    <button data-score="0">防御重視でじっくり耐える</button>
+    <button data-score="0">強力なユニットを最後まで温存する</button>
+  </div>
+  <!-- Q7 -->
+  <div id="question7" style="display: none;">
+    <h2>🃏 Q7：カードゲーム</h2>
+    <img src="IMG_1238.png" alt="カードゲーム">
+    <p>手札に強力なカードがある！</p>
+    <button data-score="0">今すぐ使う！</button>
+    <button data-score="0">ここぞという場面まで温存する</button>
+    <button data-score="1">相手の動きを見て使う</button>
+    <button data-score="0">強カードを中心にコンボを組む</button>
+  </div>
+  <!-- Q8 -->
+  <div id="question8" style="display: none;">
+    <h2>🏗️ Q8：サンドボックス・建築系</h2>
+    <img src="IMG_1241.png" alt="サンドボックス・建築ゲーム">
+    <p>自由に使える広い土地を手に入れた！</p>
+    <button data-score="0">とりあえず家を建てる</button>
+    <button data-score="0">巨大建築を始める</button>
+    <button data-score="0">まず資材を集める</button>
+    <button data-score="1">景色のいい場所を探してから建てる</button>
+  </div>
+  <!-- Q9 -->
+  <div id="question9" style="display: none;">
+    <h2>👻 Q9：ホラーゲーム</h2>
+    <img src="IMG_1239.png" alt="ホラーゲーム">
+    <p>暗い廊下の先から物音がした……</p>
+    <button data-score="0">気になるので見に行く</button>
+    <button data-score="0">武器やアイテムを確認してから進む</button>
+    <button data-score="0">怖いので別ルートを探す</button>
+    <button data-score="1">一旦その場で様子を見る</button>
+  </div>
+  <!-- Q10 -->
+  <div id="question10" style="display: none;">
+    <h2>🎵 Q10：音楽ゲーム</h2>
+    <img src="IMG_1240.png" alt="音楽ゲーム">
+    <p>難しい曲が解禁された！</p>
+    <button data-score="0">とりあえずプレイしてみる</button>
+    <button data-score="1">何度も挑戦してクリアを目指す</button>
+    <button data-score="0">簡単な曲で練習してから挑む</button>
+    <button data-score="0">クリアよりスコアやフルコンを狙う</button>
+  </div>
+  <!-- 点数 -->
+  <p>現在の点数：<span id="score">0</span>点</p>
+  <script src="script.js"></script>
+</body>
+</html>
